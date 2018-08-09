@@ -1,0 +1,31 @@
+{
+  "name": "barnowl-reel",
+  "homepage": "https://github.com/reelyactive/barnowl-reel/",
+  "author": "reelyActive <webdev@reelyactive.com>",
+  "description": "Interface reelyActive reels to barnowl open source software.  We believe in an open Internet of Things.",
+  "keywords": [
+    "reelyActive",
+    "barnowl",
+    "reel"
+  ],
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "main": "./lib/barnowl.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reelyactive/barnowl-reel.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "bugs": {
+    "url": "https://github.com/reelyactive/barnowl-reel/issues"
+  },
+  "contributors": [
+    { "name": "Jeffrey Dungen" }
+  ],
+  "license": "MIT"
+}
