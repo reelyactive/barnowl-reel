@@ -18,6 +18,8 @@
     "url": "https://github.com/reelyactive/barnowl-reel.git"
   },
   "dependencies": {
+    "advlib-identifier": ">=0.1.0",
+    "raddec": ">=0.1.0"
   },
   "devDependencies": {
   },
