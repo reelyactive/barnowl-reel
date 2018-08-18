@@ -4,6 +4,64 @@ barnowl-reel
 Interface [reelyActive reels](https://reelyactive.github.io/reel-overview.html) to [barnowl](https://github.com/reelyactive/barnowl) open source software.  We believe in an open Internet of Things.
 
 
+Installation
+------------
+
+    npm install barnowl
+
+
+Hello barnowl-reel!
+-------------------
+
+The following code will listen to _simulated_ hardware and output packets to the console:
+
+```javascript
+const BarnowlReel = require('barnowl-reel');
+
+let barnowl = new BarnowlReel();
+
+barnowl.addListener(Barnowl.TestListener, {});
+
+barnowl.on("raddec", function(raddec) {
+  console.log(raddec);
+});
+
+barnowl.on("infrastructureMessage", function(message) {
+  console.log(message);
+});
+```
+
+
+Supported Listener Interfaces
+-----------------------------
+
+The following listener interfaces are supported.
+
+### UDP
+
+```javascript
+barnowl.addListener(Barnowl.UdpListener, { path: '0.0.0.0:50000' });
+```
+
+### Serial
+
+Manually install the [serialport](https://www.npmjs.com/package/serialport) package, taking care to first meet any [prerequisites for the target platform](https://www.npmjs.com/package/serialport#installation-instructions):
+
+    npm install serialport
+
+```javascript
+barnowl.addListener(Barnowl.SerialListener, { path: 'auto' });
+```
+
+### Test
+
+Provides a steady stream of simulated reel packets for testing purposes.
+
+```javascript
+barnowl.addListener(Barnowl.TestListener, {});
+```
+
+
 License
 -------
 
