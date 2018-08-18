@@ -20,7 +20,7 @@ const BarnowlReel = require('barnowl-reel');
 
 let barnowl = new BarnowlReel();
 
-barnowl.addListener(Barnowl.TestListener, {});
+barnowl.addListener(BarnowlReel.TestListener, {});
 
 barnowl.on("raddec", function(raddec) {
   console.log(raddec);
@@ -40,7 +40,7 @@ The following listener interfaces are supported.
 ### UDP
 
 ```javascript
-barnowl.addListener(Barnowl.UdpListener, { path: '0.0.0.0:50000' });
+barnowl.addListener(BarnowlReel.UdpListener, { path: '0.0.0.0:50000' });
 ```
 
 ### Serial
@@ -50,7 +50,7 @@ Manually install the [serialport](https://www.npmjs.com/package/serialport) pack
     npm install serialport
 
 ```javascript
-barnowl.addListener(Barnowl.SerialListener, { path: 'auto' });
+barnowl.addListener(BarnowlReel.SerialListener, { path: 'auto' });
 ```
 
 ### Test
@@ -58,7 +58,7 @@ barnowl.addListener(Barnowl.SerialListener, { path: 'auto' });
 Provides a steady stream of simulated reel packets for testing purposes.
 
 ```javascript
-barnowl.addListener(Barnowl.TestListener, {});
+barnowl.addListener(BarnowlReel.TestListener, {});
 ```
 
 
