@@ -7,7 +7,7 @@ Interface [reelyActive reels](https://reelyactive.github.io/reel-overview.html) 
 Installation
 ------------
 
-    npm install barnowl
+    npm install barnowl-reel
 
 
 Hello barnowl-reel!
