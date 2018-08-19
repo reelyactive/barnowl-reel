@@ -53,6 +53,15 @@ Manually install the [serialport](https://www.npmjs.com/package/serialport) pack
 barnowl.addListener(BarnowlReel.SerialListener, { path: 'auto' });
 ```
 
+### Event
+
+Listen for reel data as an EventEmitter's "data" events.
+
+```javascript
+barnowl.addListener(BarnowlReel.EventListener,
+                    { path: eventEmitterInstance });
+```
+
 ### Test
 
 Provides a steady stream of simulated reel packets for testing purposes.
