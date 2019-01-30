@@ -55,7 +55,7 @@ barnowl.addListener(BarnowlReel.SerialListener, { path: 'auto' });
 
 ### Event
 
-Listen for reel data as an EventEmitter's "data" events.
+Listen for reel data as an EventEmitter's "data" events.  Either Buffer or hexadecimal string data is accepted.
 
 ```javascript
 barnowl.addListener(BarnowlReel.EventListener,
