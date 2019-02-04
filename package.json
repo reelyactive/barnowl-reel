@@ -8,11 +8,11 @@
     "barnowl",
     "reel"
   ],
-  "version": "0.1.8",
+  "version": "0.1.9",
   "engines": {
     "node": ">=6.0.0"
   },
-  "main": "./lib/barnowl.js",
+  "main": "./lib/barnowlreel.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/reelyactive/barnowl-reel.git"
