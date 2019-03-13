@@ -71,6 +71,28 @@ barnowl.addListener(BarnowlReel.TestListener, {});
 ```
 
 
+Supported Decoding Options
+--------------------------
+
+Each listener interface supports _decodingOptions_ with the following properties:
+
+| Property        | Default | Description                         | 
+|:----------------|:--------|:------------------------------------|
+| maxReelLength   | 254     | Ignore packets that (spuriously) exceed the given reel length |
+| minPacketLength | 0       | Ignore radio packets with less than the given number of bytes length |
+| maxPacketLength | 255     | Ignore radio packets with more than the given number of bytes length |
+
+For example, the decoding options for a UDP listener expecting a single reelceiver and BLE packets would be specified as follows:
+
+```javascript
+let options = { maxReelLength: 1, minPacketLength: 8, maxPacketLength: 39 };
+barnowl.addListener(BarnowlReel.UdpListener,
+                    { path: '0.0.0.0:50000', decodingOptions: options });
+```
+
+In most cases, explicit _decodingOptions_ are not required.  In cases where the reel serial data stream is susceptible to corruption, explicit _decodingOptions_ can limit occurrences of spurious/missed packets.
+
+
 License
 -------
 
