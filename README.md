@@ -136,6 +136,20 @@ barnowl.addListener(BarnowlReel.UdpListener,
 In most cases, explicit _decodingOptions_ are not required.  In cases where the reel serial data stream is susceptible to corruption, explicit _decodingOptions_ can limit occurrences of spurious/missed packets.
 
 
+Contributing
+------------
+
+Discover [how to contribute](CONTRIBUTING.md) to this open source project which upholds a standard [code of conduct](CODE_OF_CONDUCT.md).
+
+
+Security
+--------
+
+Consult our [security policy](SECURITY.md) for best practices using this open source software and to report vulnerabilities.
+
+[![Known Vulnerabilities](https://snyk.io/test/github/reelyactive/barnowl-reel/badge.svg)](https://snyk.io/test/github/reelyactive/barnowl-reel)
+
+
 License
 -------
 
