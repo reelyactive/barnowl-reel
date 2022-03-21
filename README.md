@@ -1,7 +1,12 @@
 barnowl-reel
 ============
 
-Interface [reelyActive reels](https://reelyactive.github.io/reel-overview.html) to [barnowl](https://github.com/reelyactive/barnowl) open source software.  We believe in an open Internet of Things.
+__barnowl-reel__ converts RF decodings from [reelyActive reels](https://www.reelyactive.com/technology/reel/#content) into software-developer-friendly JSON: a real-time stream of [raddec](https://github.com/reelyactive/raddec/) objects which facilitate any and all of the following applications:
+- RFID: _what_ is present, based on the device identifier?
+- RTLS: _where_ is it relative to the receiving devices?
+- M2M: _how_ is its status, based on any payload included in the packet?
+
+__barnowl-reel__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-reel) that can run on resource-constrained edge devices as well as on powerful cloud servers and anything in between.  It is typically run behind a [barnowl](https://github.com/reelyactive/barnowl) instance which is included in the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite.
 
 
 Installation
@@ -30,6 +35,44 @@ barnowl.on("infrastructureMessage", function(message) {
   console.log(message);
 });
 ```
+
+As output you should see a stream of [raddec](https://github.com/reelyactive/raddec/) objects similar to the following:
+
+```javascript
+{
+  transmitterId: "fee150bada55",
+  transmitterIdType: 3,
+  rssiSignature: [
+    {
+      receiverId: "001bc50940810000",
+      receiverIdType: 1,
+      rssi: -83,
+      numberOfDecodings: 1
+    },
+    {
+      receiverId: "001bc50940810001",
+      receiverIdType: 1,
+      rssi: -91,
+      numberOfDecodings: 1
+    }
+  ],
+  packets: [ '421655daba50e1fe0201050c097265656c79416374697665' ],
+  timestamp: 1547693457133
+}
+```
+
+Regardless of the underlying RF protocol and hardware, the [raddec](https://github.com/reelyactive/raddec/) specifies _what_ (transmitterId) is _where_ (receiverId & rssi), as well as _how_ (packets) and _when_ (timestamp).
+
+
+Is that owl you can do?
+-----------------------
+
+While __barnowl-reel__ may suffice standalone for simple real-time applications, its functionality can be greatly extended with the following software packages:
+- [advlib](https://github.com/reelyactive/advlib) to decode the individual packets from hexadecimal strings into JSON
+- [barnowl](https://github.com/reelyactive/barnowl) to combine parallel streams of RF decoding data in a technology-and-vendor-agnostic way
+
+These packages and more are bundled together as the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere) open source middleware suite, which includes several __barnowl-x__ listeners.
+
 
 
 Supported Listener Interfaces
