@@ -2,13 +2,15 @@
   "name": "barnowl-reel",
   "homepage": "https://github.com/reelyactive/barnowl-reel/",
   "author": "reelyActive <webdev@reelyactive.com>",
-  "description": "Interface reelyActive reels to barnowl open source software.  We believe in an open Internet of Things.",
+  "description": "Collect ambient Bluetooth Low Energy packets from reelyActive reelceivers for real-time location and sensing.  We believe in an open Internet of Things.",
   "keywords": [
     "reelyActive",
     "barnowl",
-    "reel"
+    "reel",
+    "reelceiver",
+    "raddec"
   ],
-  "version": "0.1.10",
+  "version": "0.1.11",
   "engines": {
     "node": ">=6.0.0"
   },
@@ -19,7 +21,7 @@
   },
   "dependencies": {
     "advlib-identifier": ">=0.1.0",
-    "raddec": ">=0.2.0"
+    "raddec": ">=0.2.8"
   },
   "devDependencies": {
   },
