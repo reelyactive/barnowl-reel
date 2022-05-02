@@ -10,7 +10,7 @@
     "reelceiver",
     "raddec"
   ],
-  "version": "0.1.11",
+  "version": "0.2.0",
   "engines": {
     "node": ">=6.0.0"
   },
@@ -25,8 +25,7 @@
   },
   "dependencies": {
     "advlib-identifier": ">=0.1.0",
-    "raddec": ">=0.2.8",
-    "serialport": "^9.2.8"
+    "raddec": ">=0.2.8"
   },
   "bugs": {
     "url": "https://github.com/reelyactive/barnowl-reel/issues"
