@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+const BarnowlReel = require('../lib/barnowlreel.js');
+
+let barnowl = new BarnowlReel();
+
+barnowl.addListener(BarnowlReel.UdpListener, { path: '0.0.0.0:50000' });
+
+barnowl.on('raddec', function(raddec) {
+  console.log(raddec.toFlattened());
+});

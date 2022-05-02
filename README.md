@@ -114,6 +114,14 @@ barnowl.addListener(BarnowlReel.TestListener, {});
 ```
 
 
+Pareto Anywhere Integration
+---------------------------
+
+__barnowl-reel__ includes a script to forward serial/USB data to a local [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) instance as UDP raddecs with target localhost:50001.  Manually install the serialport dependency with `npm install serialport` and then start this script with the command:
+
+    npm run serial-forwarder
+
+
 Supported Decoding Options
 --------------------------
 
