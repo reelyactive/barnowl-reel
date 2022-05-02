@@ -96,7 +96,9 @@ Manually install the [serialport](https://www.npmjs.com/package/serialport) pack
 barnowl.addListener(BarnowlReel.SerialListener, { path: 'auto' });
 ```
 
-Note that __barnowl-reel@0.2.x__ is adapted to work with serialport@10.x.x.  If errors are encountered, try forcing an install of serialport 10 with `npm install serialport@10.4.0`
+Note that __barnowl-reel v0.2__ is adapted to work with serialport v10.x.  If errors are encountered, try forcing an install of serialport 10 with `npm install serialport@10.4.0`
+
+On Ubuntu, it may be necessary to add the user to the _dialout_ group in order to have the necessary permissions to access the device, which can be accomplished with the command `sudo usermod -a -G dialout $USER` and made to take effect by logging out and back in to the user account.
 
 ### Event
 
