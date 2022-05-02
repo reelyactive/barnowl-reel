@@ -96,6 +96,8 @@ Manually install the [serialport](https://www.npmjs.com/package/serialport) pack
 barnowl.addListener(BarnowlReel.SerialListener, { path: 'auto' });
 ```
 
+Note that __barnowl-reel@0.2.x__ is adapted to work with serialport@10.x.x.  If errors are encountered, try forcing an install of serialport 10 with `npm install serialport@10.4.0`
+
 ### Event
 
 Listen for reel data as an EventEmitter's "data" events.  Either Buffer or hexadecimal string data is accepted.
