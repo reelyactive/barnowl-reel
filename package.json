@@ -10,14 +10,15 @@
     "reelceiver",
     "raddec"
   ],
-  "version": "0.2.0",
+  "version": "0.2.1",
   "engines": {
     "node": ">=6.0.0"
   },
   "main": "./lib/barnowlreel.js",
   "scripts": {
     "start": "node bin/barnowl-reel",
-    "serial-forwarder": "node bin/barnowl-reel-serial-forwarder"
+    "serial-forwarder": "node bin/barnowl-reel-serial-forwarder",
+    "udp-forwarder": "node bin/barnowl-reel-udp-forwarder"
   },
   "repository": {
     "type": "git",
