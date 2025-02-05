@@ -4,13 +4,34 @@ const dgram = require('dgram');
 const BarnowlReel = require('../lib/barnowlreel.js');
 
 const client = dgram.createSocket('udp4');
-let barnowl = new BarnowlReel();
+let address = 'localhost';
+let port = 50001;
 
+if(process.argv.length > 2) {
+  address = process.argv[2];
+}
+
+// ----- Exit gracefully if the optional dependency is not found -----
+try {
+  let serialport = require('serialport');
+}
+catch(err) {
+  console.log('This script requires the serialport package.  Try installing with:');
+  console.log('\r\n    "npm install serialport"\r\n');
+  return console.log('and then run this script again.');
+}
+// -------------------------------------------------------------------
+
+let barnowl = new BarnowlReel();
 barnowl.addListener(BarnowlReel.SerialListener, { path: 'auto' });
 
-barnowl.on('raddec', function(raddec) {
+barnowl.on('raddec', (raddec) => {
   let raddecHex = raddec.encodeAsHexString({ includeTimestamp: true,
                                              includePackets: true });
-  client.send(Buffer.from(raddecHex, 'hex'), 50001, 'localhost',
-              function(err) { });
+  client.send(Buffer.from(raddecHex, 'hex'), port, address, (err) => {
+    if(err) {
+      console.log('barnowl-reel error sending UDP packet, closing client');
+      client.close();
+    }
+  });
 });

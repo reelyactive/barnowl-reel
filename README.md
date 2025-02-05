@@ -124,6 +124,12 @@ __barnowl-reel__ includes a script to forward serial/USB data to a local [Pareto
 
     npm run serial-forwarder
 
+To instead forward UDP raddecs to a _remote_ Pareto Anywhere instance, start this script with the command:
+
+    npm run serial-forwarder xxx.xxx.xxx.xxx
+
+where xxx.xxx.xxx.xxx is the IP address of the remote instance.
+
 
 Supported Decoding Options
 --------------------------

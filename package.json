@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "advlib-identifier": ">=0.1.0",
-    "raddec": ">=0.2.8"
+    "raddec": ">=0.6.1"
   },
   "bugs": {
     "url": "https://github.com/reelyactive/barnowl-reel/issues"
