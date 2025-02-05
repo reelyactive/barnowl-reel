@@ -1,12 +1,11 @@
 barnowl-reel
 ============
 
-__barnowl-reel__ converts RF decodings from [reelyActive reels](https://www.reelyactive.com/technology/reel/#content) into software-developer-friendly JSON: a real-time stream of [raddec](https://github.com/reelyactive/raddec/) objects which facilitate any and all of the following applications:
-- RFID: _what_ is present, based on the device identifier?
-- RTLS: _where_ is it relative to the receiving devices?
-- M2M: _how_ is its status, based on any payload included in the packet?
+__barnowl-reel__ converts RF decodings from [reelyActive reels](https://www.reelyactive.com/technology/reel/) into standard developer-friendly JSON that is vendor/technology/application-agnostic.
 
-__barnowl-reel__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-reel) that can run on resource-constrained edge devices as well as on powerful cloud servers and anything in between.  It is typically run behind a [barnowl](https://github.com/reelyactive/barnowl) instance which is included in the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite.
+![Overview of barnowl-reel](https://reelyactive.github.io/barnowl-reel/images/overview.png)
+
+__barnowl-reel__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-reel) that can run on resource-constrained edge devices as well as on powerful cloud servers and anything in between.  It can [forward data](#pareto-anywhere-integration) to reelyActive's [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite, and can just as easily be run standalone behind a [barnowl](https://github.com/reelyactive/barnowl) instance, as detailed in the code examples below.
 
 
 Installation
