@@ -8,10 +8,14 @@ __barnowl-reel__ converts RF decodings from [reelyActive reels](https://www.reel
 __barnowl-reel__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-reel) that can run on resource-constrained edge devices as well as on powerful cloud servers and anything in between.  It can [forward data](#pareto-anywhere-integration) to reelyActive's [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite, and can just as easily be run standalone behind a [barnowl](https://github.com/reelyactive/barnowl) instance, as detailed in the code examples below.
 
 
-Installation
-------------
+Quick Start
+-----------
 
-    npm install barnowl-reel
+Clone this repository and install package dependencies with `npm install`.  Then from the root folder run at any time:
+
+    npm start
+
+__barnowl-reel__ will listen for reel UDP packets on port 50000 and output (flattened) __raddec__ JSON to the console.
 
 
 Hello barnowl-reel!
